@@ -1,3 +1,7 @@
+---
+title: Installation Guide
+---
+
 # 📦 Installation Guide
 
 Follow these steps to install and set up **Api Igniter** in your Laravel project.

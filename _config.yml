@@ -1,6 +1,9 @@
 theme: jekyll-theme-hacker
 
-include_custom_head: true
+title: API Igniter Docs
+
+include:
+  - docs
 
 exclude:
   - .github/workflows/pest.yml
@@ -17,7 +20,6 @@ exclude:
   - composer.lock
   - _config.yml
   - tests
-  - docs
   - favicon.png
   - phpunit.xml
   - setup-workbench.php

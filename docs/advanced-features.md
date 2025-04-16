@@ -1,3 +1,7 @@
+---
+title: Advanced Features
+---
+
 # ⚙️ Advanced Features
 
 Take your API game further with these powerful features.
