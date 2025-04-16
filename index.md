@@ -5,15 +5,4 @@ title: API Docs
 
 ## 📚 Documentation
 
-<ul>
-  {% for page in site.pages %}
-    {% assign path = page.path | downcase %}
-    {% if path contains 'docs/' %}
-      <li>
-        <a href="{{ page.url | relative_url }}">
-          {{ page.title | default: page.name }}
-        </a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+{% include nav.html %}
