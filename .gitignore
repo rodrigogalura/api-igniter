@@ -1,5 +1,7 @@
+/.github
 /vendor
 /workbench
 /_site
 testbench.yaml
 .DS_Store
+CONTRIBUTING.md
