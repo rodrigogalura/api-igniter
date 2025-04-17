@@ -4,49 +4,80 @@ title: API Reference
 
 # 📘 API Reference
 
-This section covers all public-facing methods provided by **Api Igniter**.
+This section covers all public-facing methods and query features provided by **Api Igniter**.
 
 ---
 
-## Api::success(array $data = [], int $status = 200)
+## 🧩 Field Projection (`fields`, `fields!`)
 
-Send a successful response.
+The **projectable** feature allows clients to include or exclude specific fields from the API response using query parameters. This helps optimize payload size and gives frontend consumers more control over the data they receive.
 
-```php
-Api::success([
-    'message' => 'User fetched successfully',
-    'data' => $user,
-]);
-```
+---
 
-## Api::error(string $message, int $status = 400, array $errors = [])
+### ✅ Include Specific Fields
 
-Send a generic error response.
+<div style="display: flex; gap: 1rem; align-items: flex-start;">
 
-```php
-Api::error('Something went wrong', 422);
-```
+<div style="flex: 1;">
+<strong>Request</strong>
 
-## Api::withData(mixed $data)
+<pre><code>GET {{host}}/api/users?fields=id,name,email
+</code></pre>
+</div>
 
-Chain method for attaching custom data.
+<div style="flex: 1;">
+<strong>Response</strong>
 
-```php
-Api::withData($user)->success();
-```
+<pre><code>[
+  {
+    "id": 1,
+    "name": "Benjamin Heidenreich",
+    "email": "quinton42@example.net"
+  },
+  {
+    "id": 2,
+    "name": "Jairo Armstrong",
+    "email": "damian83@example.org"
+  }
+]
+</code></pre>
+</div>
 
-## Api::macro(string $name, Closure $callback)
+</div>
 
-Define a custom macro.
+---
 
-```php
-Api::macro('unauthorized', fn() => Api::error('Unauthorized', 401));
-```
+### 🚫 Exclude Specific Fields
 
-## config/api-igniter.php
+<div style="display: flex; gap: 1rem; align-items: flex-start;">
 
-You can configure:
+<div style="flex: 1;">
+<strong>Request</strong>
 
-- default_success_status
-- default_error_status
-- Key names like status, message, data, errors
+<pre><code>GET {{host}}/api/users?fields!=created_at,updated_at
+</code></pre>
+</div>
+
+<div style="flex: 1;">
+<strong>Response</strong>
+
+<pre><code>[
+  {
+    "id": 1,
+    "name": "Benjamin Heidenreich",
+    "email": "quinton42@example.net",
+    "email_verified_at": "2025-04-17T01:19:49.000000Z"
+  },
+  {
+    "id": 2,
+    "name": "Jairo Armstrong",
+    "email": "damian83@example.org",
+    "email_verified_at": "2025-04-17T01:19:49.000000Z"
+  }
+]
+</code></pre>
+</div>
+
+</div>
+
+---
