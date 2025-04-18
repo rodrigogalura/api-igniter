@@ -12,12 +12,12 @@ The **sorting** feature allows clients to specify the order in which results are
 
 ### ⬆️ Ascending Order
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
 
-<div style="flex: 1;">
+<div style="flex: 1;" class="highlight">
 <strong>Request</strong>
 
-<pre><code>GET /api/users?sort[name]</code></pre>
+<pre class="highlight"><code>GET /api/users?sort[name]</code></pre>
 
 <sup>Where <ins>name</ins> is the field to be targeted for sorting in ascending order.</sup>
 
@@ -65,12 +65,12 @@ The **sorting** feature allows clients to specify the order in which results are
 
 ### ⬇️ Descending Order
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
 
-<div style="flex: 1;">
+<div style="flex: 1;" class="highlight">
 <strong>Request</strong>
 
-<pre><code>GET /api/users?sort[id]=-</code></pre>
+<pre class="highlight"><code>GET /api/users?sort[id]=-</code></pre>
 
 <sup>Where <ins>id</ins> is the field to be targeted and <ins>\-</ins> is the indicator that data should be in descending order.
 Other accepted indicators: <ins>d</ins>, <ins>des</ins>, <ins>desc</ins>, <ins>descending</ins>.</sup>

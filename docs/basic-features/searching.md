@@ -18,12 +18,12 @@ You can use:
 
 ### 🌐 Both-Side Wildcard (`*term*`)
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
 
-<div style="flex: 1;">
+<div style="flex: 1;" class="highlight">
 <strong>Request</strong>
 
-<pre><code>GET /api/users?search[name]=*III*</code></pre>
+<pre class="highlight"><code>GET /api/users?search[name]=*III*</code></pre>
 
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
@@ -63,12 +63,12 @@ You can use:
 
 ### 🔚 Postfix Wildcard (`term*`)
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
 
-<div style="flex: 1;">
+<div style="flex: 1;" class="highlight">
 <strong>Request</strong>
 
-<pre><code>GET /api/users?search[name]=Dr*</code></pre>
+<pre class="highlight"><code>GET /api/users?search[name]=Dr*</code></pre>
 
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
@@ -103,12 +103,12 @@ You can use:
 
 ### 🔙 Prefix Wildcard (`*term`)
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
 
-<div style="flex: 1;">
+<div style="flex: 1;" class="highlight">
 <strong>Request</strong>
 
-<pre><code>GET /api/users?search[email]=*org</code></pre>
+<pre class="highlight"><code>GET /api/users?search[email]=*org</code></pre>
 
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>

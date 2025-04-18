@@ -2,7 +2,9 @@
 title: Frequently Asked Questions
 ---
 
-# ❓ Frequently Asked Questions (this is not actual data)
+# ❓ Frequently Asked Questions (soon)
+
+<!-- **This is not the actual data yet**
 
 ---
 
@@ -39,3 +41,4 @@ return Api::success([
 Api Igniter auto-formats them into a clean JSON structure. You don’t need to handle it manually.
 
 ---
+ -->

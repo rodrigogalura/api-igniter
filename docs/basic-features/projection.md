@@ -12,12 +12,12 @@ The **projection** feature allows clients to include or exclude specific fields 
 
 ### ✅ Include Specific Fields
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
 
-<div style="flex: 1;">
+<div style="flex: 1;" class="highlight">
 <strong>Request</strong>
 
-<pre><code>GET /api/users?fields=id,name,email</code></pre>
+<pre class="highlight"><code>GET /api/users?fields=id,name,email</code></pre>
 
 <sup>Where <ins>id</ins>, <ins>name</ins>, and <ins>email</ins> are the fields to include in the response.</sup>
 
@@ -57,12 +57,12 @@ The **projection** feature allows clients to include or exclude specific fields 
 
 ### 🚫 Exclude Specific Fields
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
 
-<div style="flex: 1;">
+<div style="flex: 1;" class="highlight">
 <strong>Request</strong>
 
-<pre><code>GET /api/users?fields!=created_at,updated_at</code></pre>
+<pre class="highlight"><code>GET /api/users?fields!=created_at,updated_at</code></pre>
 
 <sup>Where <ins>created_at</ins> and <ins>updated_at</ins> are the fields to exclude from the response.</sup>
 

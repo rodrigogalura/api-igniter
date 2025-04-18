@@ -16,3 +16,26 @@ a.active {
 .sup {
     font-size: smaller;
 }
+
+.language-php > .highlight,
+.language-bash > .highlight,
+.language-http > .highlight {
+    position: relative;
+}
+
+.language-http pre.highlight > code > span {
+    background-color: #000;
+    color: #b5e853;
+}
+
+.copy-button {
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    right: 2px;
+    padding: 4px 10px;
+    background: #b5e853;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
