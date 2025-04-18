@@ -19,8 +19,7 @@ The **projectable** feature allows clients to include or exclude specific fields
 <div style="flex: 1;">
 <strong>Request</strong>
 
-<pre><code>GET {{host}}/api/users?fields=id,name,email
-</code></pre>
+<pre><code>GET /api/users?fields=id,name,email</code></pre>
 
 <details open>
 <summary><strong>Query Parameters</strong></summary>
@@ -61,8 +60,7 @@ The **projectable** feature allows clients to include or exclude specific fields
 <div style="flex: 1;">
 <strong>Request</strong>
 
-<pre><code>GET {{host}}/api/users?fields!=created_at,updated_at
-</code></pre>
+<pre><code>GET /api/users?fields!=created_at,updated_at</code></pre>
 
 <details open>
 <summary><strong>Query Parameters</strong></summary>
