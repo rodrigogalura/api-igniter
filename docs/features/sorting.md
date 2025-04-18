@@ -26,9 +26,9 @@ The **sorting** feature allows clients to specify the order in which results are
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
-| Name | Type  | Description                                    |
-|------|-------|------------------------------------------------|
-| sort | array | **Key** - Target field.<br>**Value** - *blank* |
+| Name        | Type   | Description       |
+|-------------|--------|-------------------|
+| sort[field] | string | *No value needed* |
 
 </details>
 </div>
@@ -78,9 +78,9 @@ Other accepted indicators: <ins>d</ins>, <ins>des</ins>, <ins>desc</ins>, <ins>d
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
-| Name  | Type  | Description                                                                                                                       |
-|-------|-------|-----------------------------------------------------------------------------------------------------------------------------------|
-| sort  | array | **Key** - Target field.<br>**Value** - <ins>-</ins> or <ins>d</ins> or <ins>des</ins> or <ins>desc</ins> or <ins>descending</ins> |
+| Name         | Type   | Description                                                                                |
+|--------------|--------|--------------------------------------------------------------------------------------------|
+| sort[field]  | string | <ins>-</ins> or <ins>d</ins> or <ins>des</ins> or <ins>desc</ins> or <ins>descending</ins> |
 </details>
 </div>
 
