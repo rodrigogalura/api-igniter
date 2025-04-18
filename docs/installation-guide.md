@@ -33,9 +33,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use \RGalura\ApiIgniter\Traits\Core\ApiIgniter;
-    use \RGalura\ApiIgniter\Traits\Projectable;
-    use \RGalura\ApiIgniter\Traits\Searchable;
+    use \RGalura\ApiIgniter\ApiIgniter;
+    use \RGalura\ApiIgniter\Projectable;
+    use \RGalura\ApiIgniter\Searchable;
 ```
 
 Then, register a route that returns your model using the <ins>**send()**</ins> method:
