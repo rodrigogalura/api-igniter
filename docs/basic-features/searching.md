@@ -8,7 +8,7 @@ title: Searching
 
 The **searching** feature allows clients to perform keyword-based searches across defined fields. It’s useful for implementing search bars or global search functionalities in applications.
 
-You can use:
+**You can use:**
 - `term` → match anywhere
 - `*term*` → match anywhere
 - `term*` → match at the beginning

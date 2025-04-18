@@ -1,5 +1,5 @@
+<!-- {% assign current = page.url %}
 <ul>
-{% assign current = page.url %}
 {% for page in site.pages %}
   {% assign path = page.path | downcase %}
   {% if path contains 'docs/' %}
@@ -12,4 +12,21 @@
     {% endunless %}
   {% endif %}
 {% endfor %}
+</ul> -->
+<ul>
+  <li>
+    <a href="/docs/installation-guide.html" class="{% if page.url == "/docs/installation-guide.html" %}active{% endif %}">
+      Installation Guide
+    </a>
+  </li>
+  <li>
+    <a href="/docs/api-reference.html" class="{% if page.url == "/docs/api-reference.html" %}active{% endif %}">
+      API Reference
+    </a>
+  </li>
+  <li>
+    <a href="/docs/faq.html" class="{% if page.url == "/docs/faq.html" %}active{% endif %}">
+      Frequently Asked Questions
+    </a>
+  </li>
 </ul>
