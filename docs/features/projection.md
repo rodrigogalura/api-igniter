@@ -2,13 +2,11 @@
 title: Projection
 ---
 
-# 📘 Projection
-
 {% include features.html %}
 
-## 🧩 Projection (`fields`, `fields!`)
+## 🔍 Projection (`fields`, `fields!`)
 
-The **projectable** feature allows clients to include or exclude specific fields from the API response using query parameters. This helps optimize payload size and gives frontend consumers more control over the data they receive.
+The **projection** feature allows clients to include or exclude specific fields from the API response using query parameters. This helps optimize payload size and gives frontend consumers more control over the data they receive.
 
 ---
 
@@ -21,7 +19,11 @@ The **projectable** feature allows clients to include or exclude specific fields
 
 <pre><code>GET /api/users?fields=id,name,email</code></pre>
 
-<details open>
+<sup>Where <ins>id</ins>, <ins>name</ins>, and <ins>email</ins> are the fields to include in the response.</sup>
+
+---
+
+<details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
 | Name   | Type   | Description                                |
@@ -62,7 +64,9 @@ The **projectable** feature allows clients to include or exclude specific fields
 
 <pre><code>GET /api/users?fields!=created_at,updated_at</code></pre>
 
-<details open>
+<sup>Where <ins>created_at</ins> and <ins>updated_at</ins> are the fields to exclude from the response.</sup>
+
+<details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
 | Name    | Type   | Description                                |

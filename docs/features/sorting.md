@@ -1,14 +1,12 @@
 ---
-title: Sort
+title: Sorting
 ---
-
-# 🔃 Sorting
 
 {% include features.html %}
 
-## 🔢 Sorting (`sort[]`)
+## ↕️ Sorting (`sort[]`)
 
-The **sortable** feature allows clients to specify the order in which results are returned by one or more fields. This helps improve data presentation on the frontend.
+The **sorting** feature allows clients to specify the order in which results are returned by one or more fields. This helps improve data presentation on the frontend.
 
 ---
 
@@ -80,8 +78,8 @@ Other accepted indicators: <ins>d</ins>, <ins>des</ins>, <ins>desc</ins>, <ins>d
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
-| Name  | Type  | Description                                                   |
-|-------|-------|---------------------------------------------------------------|
+| Name  | Type  | Description                                                                                                                       |
+|-------|-------|-----------------------------------------------------------------------------------------------------------------------------------|
 | sort  | array | **Key** - Target field.<br>**Value** - <ins>-</ins> or <ins>d</ins> or <ins>des</ins> or <ins>desc</ins> or <ins>descending</ins> |
 </details>
 </div>
