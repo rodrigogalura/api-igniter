@@ -80,7 +80,7 @@ Other accepted indicators: <ins>d</ins>, <ins>des</ins>, <ins>desc</ins>, <ins>d
 
 | Name         | Type   | Description                                                                                |
 |--------------|--------|--------------------------------------------------------------------------------------------|
-| sort[field]  | string | <ins>-</ins> or <ins>d</ins> or <ins>des</ins> or <ins>desc</ins> or <ins>descending</ins> |
+| sort[field]  | string | Value should be <ins>-</ins> or <ins>d</ins> or <ins>des</ins> or <ins>desc</ins> or <ins>descending</ins> |
 </details>
 </div>
 
