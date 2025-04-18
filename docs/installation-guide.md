@@ -2,9 +2,9 @@
 title: Installation Guide
 ---
 
-# 📦 Installation Guide
+# 📦 Installation Guide (soon)
 
-Follow these steps to install and set up **Api Igniter** in your Laravel project.
+<!-- Follow these steps to install and set up **Api Igniter** in your Laravel project.
 
 ## Requirements
 
@@ -37,7 +37,7 @@ return Api::success([
     'message' => 'Operation completed.',
     'data' => $user,
 ]);
-```
+``` -->
 
 
 
