@@ -28,7 +28,7 @@
         </section>
 
         {% if page.url != "/" %}
-          <details open>
+          <details {% unless page.path contains 'docs/features/' %}open{% endunless %}>
             <summary><strong>📚 Documentation</strong></summary>
             {% include nav.html %}
           </details>
