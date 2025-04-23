@@ -61,6 +61,8 @@ The **sorting** feature allows clients to specify the order in which results are
 
 </div>
 
+<br>
+
 ---
 
 ### ⬇️ Descending Order
@@ -111,5 +113,7 @@ Other accepted indicators: <ins>d</ins>, <ins>des</ins>, <ins>desc</ins>, <ins>d
 </div>
 
 </div>
+
+<br>
 
 ---

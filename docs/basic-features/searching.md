@@ -59,6 +59,8 @@ The **searching** feature allows clients to perform keyword-based searches acros
 
 </div>
 
+<br>
+
 ---
 
 ### 🔚 Postfix Wildcard (`term*`)
@@ -98,6 +100,8 @@ The **searching** feature allows clients to perform keyword-based searches acros
 </div>
 
 </div>
+
+<br>
 
 ---
 
@@ -140,6 +144,8 @@ The **searching** feature allows clients to perform keyword-based searches acros
 </div>
 
 </div>
+
+<br>
 
 ---
 

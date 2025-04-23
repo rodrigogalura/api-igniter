@@ -39,3 +39,12 @@ a.active {
     border-radius: 0;
     cursor: pointer;
 }
+
+pre.highlight {
+    width: 500px;
+    overflow-x: hidden;
+}
+
+pre.highlight:hover {
+    overflow-x: auto;
+}

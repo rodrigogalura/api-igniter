@@ -53,6 +53,8 @@ The **projection** feature allows clients to include or exclude specific fields 
 
 </div>
 
+<br>
+
 ---
 
 ### 🚫 Exclude Specific Fields
@@ -97,5 +99,7 @@ The **projection** feature allows clients to include or exclude specific fields 
 </div>
 
 </div>
+
+<br>
 
 ---
