@@ -24,9 +24,9 @@ The **in-filter** allows clients to request resources that match specific values
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
-| Name    | Type   | Description                             |
-|---------|--------|-----------------------------------------|
-| ind[id] | string | Comma-separated list of IDs to include. |
+| Name   | Type   | Description                             |
+|--------|--------|-----------------------------------------|
+| in[id] | string | Comma-separated list of IDs to include. |
 </details>
 
 </div>
