@@ -10,7 +10,7 @@ The **in-filter** allows clients to request resources that match specific values
 
 ---
 
-🔹 Filter by Multiple IDs
+### 🔹 Filter by Multiple IDs
 
 <div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
 
@@ -19,13 +19,13 @@ The **in-filter** allows clients to request resources that match specific values
 
 <pre class="highlight"><code>GET /api/users?in[id]=1,2,3</code></pre>
 
-<!-- <sup>Where <ins>id</ins> is the target field for filtering, and <ins>3,7</ins> represent the minimum and maximum bounds of the range.</sup> -->
+<sup>Where <ins>id</ins> is the target field for filtering, and <ins>1,2,3</ins> are the specific values to match.</sup>
 
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
-| Name        | Type   | Description                                            |
-|-------------|--------|--------------------------------------------------------|
+| Name    | Type   | Description                             |
+|---------|--------|-----------------------------------------|
 | ind[id] | string | Comma-separated list of IDs to include. |
 </details>
 
@@ -57,16 +57,15 @@ The **in-filter** allows clients to request resources that match specific values
 
 <pre class="highlight"><code>GET /api/users?in[id]=1,2,3&amp;in[and status]=active,pending</code></pre>
 
-<!-- <sup>Where <ins>id, created</ins> are the target fields for filtering, <ins>and</ins> is the logical operator, and <ins>1,3, 2025-04-01,2025-04-17</ins> represent the min/max bounds of their respective ranges.</sup> -->
+<sup>Where <ins>id, status</ins> are the target fields for filtering, <ins>and</ins> is the logical operator, and <ins>1,2,3, active,pending</ins> are the values to filter by.</sup>
 
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
-| Name                    | Type   | Description                                       |
-|-------------------------|--------|---------------------------------------------------|
-| in[id]             | string | Match IDs 1, 2, 3                        |
-| in[and status] | string | AND condition for matching users with status values
- |
+| Name           | Type   | Description                                         |
+|----------------|--------|-----------------------------------------------------|
+| in[id]         | string | Match IDs 1, 2, 3                                   |
+| in[and status] | string | AND condition for matching users with status values |
 </details>
 
 </div>
@@ -96,14 +95,14 @@ The **in-filter** allows clients to request resources that match specific values
 
 <pre class="highlight"><code>GET /api/users?in[id]=1,2&amp;in[or role]=admin,editor</code></pre>
 
-<!-- <sup>Where <ins>id, created</ins> are the target fields for filtering, <ins>OR</ins> is the logical operator, and <ins>3,5, 2025-04-01,2025-04-17</ins> represent the min/max bounds of the range filters.</sup> -->
+<sup>Where <ins>id, role</ins> are the target fields for filtering, <ins>or</ins> is the logical operator, and <ins>1,2, admin,editor</ins> are the acceptable values.</sup>
 
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
-| Name                   | Type   | Description                                     |
-|------------------------|--------|-------------------------------------------------|
-| in[id]            | string | Match IDs 1 or 2                      |
+| Name          | Type   | Description                     |
+|---------------|--------|---------------------------------|
+| in[id]        | string | Match IDs 1 or 2                |
 | in[or status] | string | OR condition for matching roles |
 </details>
 
@@ -134,15 +133,15 @@ The **in-filter** allows clients to request resources that match specific values
 
 <pre class="highlight">GET /api/users?in[id]=1,2,3&amp;in[and! status]=banned</code></pre>
 
-<!-- <sup>Where <ins>id, created</ins> are the target fields for filtering, <ins>and!</ins> is the logical operator with a negation effect, and <ins>3,5, 2025-04-01,2025-04-17</ins> represent the min/max bounds to be excluded.</sup> -->
+<sup>Where <ins>id, status</ins> are the target fields for filtering, <ins>and!</ins> is the logical operator with a negation effect, and <ins>1,2,3, banned</ins> are the values to be excluded.</sup>
 
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
-| Name                     | Type   | Description                                                             |
-|--------------------------|--------|-------------------------------------------------------------------------|
-| in[id]              | string | Filter by specific IDs                                              |
-| in[and! created_at] | string | Exclude results where status is â€œbannedâ€ using NOT AND |
+| Name                | Type   | Description                                            |
+|---------------------|--------|--------------------------------------------------------|
+| in[id]              | string | Filter by specific IDs                                 |
+| in[and! created_at] | string | Exclude results where status is "banned" using NOT AND |
 </details>
 
 </div>
@@ -172,14 +171,14 @@ The **in-filter** allows clients to request resources that match specific values
 
 <pre class="highlight"><code>GET /api/users?in[id]=1,2,3&amp;in[or! role]=banned,guest</code></pre>
 
-<!-- <sup>Where <ins>id, created</ins> are the target fields for filtering, <ins>or!</ins> is the logical operator with a negation effect, and <ins>3,5, 2025-04-01,2025-04-17</ins> represent the min/max bounds to be excluded.</sup> -->
+<sup>Where <ins>id, role</ins> are the target fields for filtering, <ins>or!</ins> is the logical operator with a negation effect, and <ins>1,2,3, banned,guest</ins> are the values to be excluded.</sup>
 
 <details open class="sup">
 <summary><strong>Query Parameters</strong></summary>
 
-| Name                    | Type   | Description                                                         |
-|-------------------------|--------|---------------------------------------------------------------------|
-| in[id]             | string | Filter by specific IDs                                          |
+| Name               | Type   | Description                                                        |
+|--------------------|--------|--------------------------------------------------------------------|
+| in[id]             | string | Filter by specific IDs                                             |
 | in[or! created_at] | string | Exclude if any role matches "banned" or "guest" using NOT OR logic |
 </details>
 
