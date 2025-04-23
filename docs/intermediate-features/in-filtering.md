@@ -4,6 +4,199 @@ title: In Filtering
 
 {% include features.html %}
 
-## 🌪 In Filtering (`baking...`)
+## 🌪 In Filtering (`in[field]`)
 
-The **in-filtering** feature allows filtering results by checking if a field matches any value in a list (e.g., in[id]=1,2,3). It’s useful for bulk data retrieval scenarios.
+The **in-filter** allows clients to request resources that match specific values for a field. You can also combine multiple fields using logical operators.
+
+---
+
+🔹 Filter by Multiple IDs
+
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+
+<div style="flex: 1;" class="highlight">
+<strong>Request</strong>
+
+<pre class="highlight"><code>GET /api/users?in[id]=1,2,3</code></pre>
+
+<!-- <sup>Where <ins>id</ins> is the target field for filtering, and <ins>3,7</ins> represent the minimum and maximum bounds of the range.</sup> -->
+
+<details open class="sup">
+<summary><strong>Query Parameters</strong></summary>
+
+| Name        | Type   | Description                                            |
+|-------------|--------|--------------------------------------------------------|
+| ind[id] | string | Comma-separated list of IDs to include. |
+</details>
+
+</div>
+
+<div style="flex: 1;">
+<strong>Response</strong>
+
+<pre><code>[
+  { "id": 1, "name": "...", ... },
+  { "id": 2, "name": "...", ... },
+  { "id": 3, "name": "...", ... }
+]
+</code></pre>
+</div>
+
+</div>
+
+<br>
+
+---
+
+### 🔹 Combine with AND Operator
+
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+
+<div style="flex: 1;" class="highlight">
+<strong>Request</strong>
+
+<pre class="highlight"><code>GET /api/users?in[id]=1,2,3&amp;in[and status]=active,pending</code></pre>
+
+<!-- <sup>Where <ins>id, created</ins> are the target fields for filtering, <ins>and</ins> is the logical operator, and <ins>1,3, 2025-04-01,2025-04-17</ins> represent the min/max bounds of their respective ranges.</sup> -->
+
+<details open class="sup">
+<summary><strong>Query Parameters</strong></summary>
+
+| Name                    | Type   | Description                                       |
+|-------------------------|--------|---------------------------------------------------|
+| in[id]             | string | Match IDs 1, 2, 3                        |
+| in[and status] | string | AND condition for matching users with status values
+ |
+</details>
+
+</div>
+
+<div style="flex: 1;">
+<strong>Response</strong>
+
+<pre><code>[
+  { "id": 1, "status": "active", ... },
+  { "id": 2, "status": "pending", ... }
+]
+</code></pre>
+</div>
+
+</div>
+
+<br>
+
+---
+
+### 🔹 Combine with OR Operator
+
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+
+<div style="flex: 1;" class="highlight">
+<strong>Request</strong>
+
+<pre class="highlight"><code>GET /api/users?in[id]=1,2&amp;in[or role]=admin,editor</code></pre>
+
+<!-- <sup>Where <ins>id, created</ins> are the target fields for filtering, <ins>OR</ins> is the logical operator, and <ins>3,5, 2025-04-01,2025-04-17</ins> represent the min/max bounds of the range filters.</sup> -->
+
+<details open class="sup">
+<summary><strong>Query Parameters</strong></summary>
+
+| Name                   | Type   | Description                                     |
+|------------------------|--------|-------------------------------------------------|
+| in[id]            | string | Match IDs 1 or 2                      |
+| in[or status] | string | OR condition for matching roles |
+</details>
+
+</div>
+
+<div style="flex: 1;">
+<strong>Response</strong>
+
+<pre><code>[
+  { "id": 1, "role": "admin", ... },
+  { "id": 2, "role": "editor", ... }
+]
+</code></pre>
+</div>
+
+</div>
+
+<br>
+
+---
+
+### 🔹 NOT AND Operator (and!)
+
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+
+<div style="flex: 1;" class="highlight">
+<strong>Request</strong>
+
+<pre class="highlight">GET /api/users?in[id]=1,2,3&amp;in[and! status]=banned</code></pre>
+
+<!-- <sup>Where <ins>id, created</ins> are the target fields for filtering, <ins>and!</ins> is the logical operator with a negation effect, and <ins>3,5, 2025-04-01,2025-04-17</ins> represent the min/max bounds to be excluded.</sup> -->
+
+<details open class="sup">
+<summary><strong>Query Parameters</strong></summary>
+
+| Name                     | Type   | Description                                                             |
+|--------------------------|--------|-------------------------------------------------------------------------|
+| in[id]              | string | Filter by specific IDs                                              |
+| in[and! created_at] | string | Exclude results where status is â€œbannedâ€ using NOT AND |
+</details>
+
+</div>
+
+<div style="flex: 1;">
+<strong>Response</strong>
+
+<pre><code>[
+  { "id": 1, "status": "active", ... },
+  { "id": 3, "status": "pending", ... }
+]
+</code></pre>
+</div>
+
+</div>
+
+<br>
+
+---
+
+### 🔹 NOT OR Operator (or!)
+
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+
+<div style="flex: 1;" class="highlight">
+<strong>Request</strong>
+
+<pre class="highlight"><code>GET /api/users?in[id]=1,2,3&amp;in[or! role]=banned,guest</code></pre>
+
+<!-- <sup>Where <ins>id, created</ins> are the target fields for filtering, <ins>or!</ins> is the logical operator with a negation effect, and <ins>3,5, 2025-04-01,2025-04-17</ins> represent the min/max bounds to be excluded.</sup> -->
+
+<details open class="sup">
+<summary><strong>Query Parameters</strong></summary>
+
+| Name                    | Type   | Description                                                         |
+|-------------------------|--------|---------------------------------------------------------------------|
+| in[id]             | string | Filter by specific IDs                                          |
+| in[or! created_at] | string | Exclude if any role matches "banned" or "guest" using NOT OR logic |
+</details>
+
+</div>
+
+<div style="flex: 1;">
+<strong>Response</strong>
+
+<pre><code>[
+  { "id": 1, "role": "admin", ... },
+  { "id": 2, "role": "editor", ... }
+]
+</code></pre>
+</div>
+
+</div>
+
+<br>
+
+---
