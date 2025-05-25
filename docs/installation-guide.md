@@ -44,8 +44,19 @@ class User extends Authenticatable
     use Projectable;
     use Searchable;
     // ...
+
+    # ⚠️ Do NOT define this:
+    // public function send()
+    // {
+    //
+    // }
 }
 ```
+
+> ⚠️ Important: Avoid Defining a send Method
+>
+> The send() method is already defined in the ApiIgniter trait.
+> To avoid conflicts or unexpected behavior, do not override or define your own send() method in any model that uses this trait.
 
 Then, register a route that returns your model using the <ins>**send()**</ins> method:
 
