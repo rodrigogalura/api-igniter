@@ -12,7 +12,7 @@ The **filter** query allows you to compare field values using math operators lik
 
 ### 🔹 Basic Comparison
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -48,7 +48,7 @@ The **filter** query allows you to compare field values using math operators lik
 
 ### 🔹 Greater Than
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -78,7 +78,7 @@ The **filter** query allows you to compare field values using math operators lik
 
 ### 🔹 Greater Than or Equal To
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -95,7 +95,8 @@ The **filter** query allows you to compare field values using math operators lik
 <pre><code>[
   { "id": 1, "name": "...", ... },
   { "id": 2, "name": "...", ... },
-  { "id": 3, "name": "...", ... }
+  { "id": 3, "name": "...", ... },
+  ...
 ]
 </code></pre>
 </div>
@@ -108,7 +109,7 @@ The **filter** query allows you to compare field values using math operators lik
 
 ### 🔹 Less Than
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -137,7 +138,7 @@ The **filter** query allows you to compare field values using math operators lik
 
 ### 🔹 Less Than or Equal To
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -167,7 +168,7 @@ The **filter** query allows you to compare field values using math operators lik
 
 ### 🔹 Not Equal To
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -209,7 +210,7 @@ Like other filters, you can combine filtering rules using:
 
 ### 🔸 Example: AND Operator
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -239,7 +240,7 @@ Matches users with <ins>ID >= 2 and status is active</ins>.
 
 ### 🔸 Example: OR Operator
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -270,7 +271,7 @@ Matches users with <ins>ID < 3 or status is guest</ins>.
 
 ### 🔸 Example: NOT Operator
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>

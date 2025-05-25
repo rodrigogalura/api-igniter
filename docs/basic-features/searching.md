@@ -18,7 +18,7 @@ The **searching** feature allows clients to perform keyword-based searches acros
 
 ### 🌐 Both-Side Wildcard (`*term*`)
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -65,7 +65,7 @@ The **searching** feature allows clients to perform keyword-based searches acros
 
 ### 🔚 Postfix Wildcard (`term*`)
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -107,7 +107,7 @@ The **searching** feature allows clients to perform keyword-based searches acros
 
 ### 🔙 Prefix Wildcard (`*term`)
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>

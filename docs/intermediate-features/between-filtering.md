@@ -12,7 +12,7 @@ The **between feature** allows you to filter results based on a range of values 
 
 ### 🔹 Filter by ID Range
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -52,7 +52,7 @@ The **between feature** allows you to filter results based on a range of values 
 
 ### 🔹 Combine with AND Operator
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -90,7 +90,7 @@ The **between feature** allows you to filter results based on a range of values 
 
 ### 🔹 Combine with OR Operator
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -131,7 +131,7 @@ The **between feature** allows you to filter results based on a range of values 
 
 ### 🔹 NOT AND Operator (and!)
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -169,7 +169,7 @@ The **between feature** allows you to filter results based on a range of values 
 
 ### 🔹 NOT OR Operator (or!)
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>

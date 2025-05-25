@@ -12,7 +12,7 @@ The **sorting** feature allows clients to specify the order in which results are
 
 ### ⬆️ Ascending Order
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>
@@ -67,7 +67,7 @@ The **sorting** feature allows clients to specify the order in which results are
 
 ### ⬇️ Descending Order
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;" class="language-http">
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
 
 <div style="flex: 1;" class="highlight">
 <strong>Request</strong>

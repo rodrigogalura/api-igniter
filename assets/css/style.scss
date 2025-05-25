@@ -19,13 +19,9 @@ a.active {
 
 .language-php > .highlight,
 .language-bash > .highlight,
-.language-http > .highlight {
+.language-http > .highlight,
+.req-res > .highlight {
     position: relative;
-}
-
-.language-http pre.highlight > code > span {
-    background-color: #000;
-    color: #b5e853;
 }
 
 .copy-button {
@@ -40,11 +36,15 @@ a.active {
     cursor: pointer;
 }
 
-pre.highlight {
-    width: 500px;
-    overflow-x: hidden;
+.req-res > div {
+    width: 50%
 }
 
-pre.highlight:hover {
-    overflow-x: auto;
-}
+// pre.highlight {
+//     width: 500px;
+//     overflow-x: hidden;
+// }
+
+// pre.highlight:hover {
+//     overflow-x: auto;
+// }

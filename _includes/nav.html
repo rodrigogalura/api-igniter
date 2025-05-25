@@ -1,6 +1,8 @@
-<!-- {% assign current = page.url %}
+{% assign pages = site.pages | sort: "order" %}
+{% assign current = page.url %}
+
 <ul>
-{% for page in site.pages %}
+{% for page in pages %}
   {% assign path = page.path | downcase %}
   {% if path contains 'docs/' %}
     {% unless path contains 'docs/basic-features/' or path contains 'docs/intermediate-features/' or path contains 'docs/advanced-features/' %}
@@ -12,21 +14,4 @@
     {% endunless %}
   {% endif %}
 {% endfor %}
-</ul> -->
-<ul>
-  <li>
-    <a href="{{ '/docs/installation-guide.html' | relative_url }}" class="{% if page.url == "{{ '/docs/installation-guide.html' | relative_url }}" %}active{% endif %}">
-      Installation Guide
-    </a>
-  </li>
-  <li>
-    <a href="{{ '/docs/api-reference.html' | relative_url }}" class="{% if page.url == "{{ '/docs/api-reference.html' | relative_url }}" %}active{% endif %}">
-      API Reference
-    </a>
-  </li>
-  <li>
-    <a href="{{ '/docs/faq.html' | relative_url }}" class="{% if page.url == "{{ '/docs/faq.html' | relative_url }}" %}active{% endif %}">
-      Frequently Asked Questions
-    </a>
-  </li>
 </ul>

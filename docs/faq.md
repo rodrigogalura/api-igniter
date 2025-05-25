@@ -1,5 +1,6 @@
 ---
 title: Frequently Asked Questions
+order: 3
 ---
 
 # ❓ Frequently Asked Questions (soon)

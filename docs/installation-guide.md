@@ -1,5 +1,6 @@
 ---
 title: Installation Guide
+order: 1
 ---
 
 # 📦 Installation Guide
@@ -27,15 +28,28 @@ composer require rgalura/api-igniter
 Use the <ins>ApiIgniter</ins> core trait along with any specific features you want to enable:
 
 ```php
-namespace App\Models;
+<?php namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use RGalura\ApiIgniter\{
+    ApiIgniter, // Core
+    Projectable,
+    Searchable,
+    // Sortable,
+    // Filterable,
+    // InFilterable,
+    // BetweenFilterable,
+    // Expandable,
+};
+
 class User extends Authenticatable
 {
-    use \RGalura\ApiIgniter\ApiIgniter;
-    use \RGalura\ApiIgniter\Projectable;
-    use \RGalura\ApiIgniter\Searchable;
+    use ApiIgniter;
+    use Projectable;
+    use Searchable;
+    // ...
+}
 ```
 
 Then, register a route that returns your model using the <ins>**send()**</ins> method:
@@ -55,31 +69,39 @@ Route::get('/api/users', function () {
 
 Open your browser or an API client like Postman and try this example request:
 
-```http
-GET /api/users?fields=id,name,email&search[name]=Dr*
+<!-- ```
+
 ```
 
 ✅ This should return a list of users with the Dr prefix in their names, and only the id, name, and email fields in the response.
 
 ---
+<br> -->
+
+<div style="display: flex; gap: 2rem; align-items: flex-start;" class="req-res">
+
+<div style="flex: 1;" class="highlight">
+<strong>Request</strong>
+
+<pre class="highlight"><code>GET /api/users?fields=id,name,email&search[name]=Dr*</code></pre>
+
+</div>
+
+<div style="flex: 1;">
+<strong>Response</strong>
+
+<pre><code>[
+  { "id": 1, "name": "Dr Foo", "email": ... },
+  { "id": 2, "name": "Dr Bar", "email": ... },
+  { "id": 3, "name": "Dr Baz", "email": ... }
+]
+</code></pre>
+</div>
+
+</div>
+
 <br>
 
 ## 🧭 Next Steps
 
-Now that you’re up and running, explore more features in the [API Reference](https://rodrigogalura.github.io/api-igniter/docs/api-reference.html):
-
-🌪️ Filtering
-
-🌪️ In Filtering
-
-🌪️ Between Filtering
-
-🔃 Sorting
-
-🔗 Expanding Relations
-
-📄 Pagination
-
-🧩 ~~Field Projection~~
-
-🔍 ~~Searching~~
+Now that you’re up and running, explore more features in the [API Reference](https://rodrigogalura.github.io/api-igniter/docs/api-reference.html).
