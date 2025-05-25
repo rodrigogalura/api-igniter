@@ -1,5 +1,8 @@
 ---
 title: Sorting
+level: 2
+order: 2
+category: basic
 ---
 
 {% include features.html %}
@@ -7,6 +10,8 @@ title: Sorting
 ## ↕️ Sorting (`sort[field]`)
 
 The **sorting** feature allows clients to specify the order in which results are returned by one or more fields. This helps improve data presentation on the frontend.
+
+<br>
 
 ---
 

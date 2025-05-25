@@ -1,5 +1,8 @@
 ---
 title: Between Filtering
+level: 2
+order: 3
+category: intermediate
 ---
 
 {% include features.html %}
@@ -7,6 +10,8 @@ title: Between Filtering
 ## 🌪️ Between Filtering (`between[field]=min,max`)
 
 The **between feature** allows you to filter results based on a range of values for one or more fields. It also supports combining multiple conditions using logical operators like AND, OR, and their negated versions.
+
+<br>
 
 ---
 

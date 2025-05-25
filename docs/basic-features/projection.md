@@ -1,5 +1,8 @@
 ---
 title: Projection
+level: 2
+order: 1
+category: basic
 ---
 
 {% include features.html %}
@@ -7,6 +10,8 @@ title: Projection
 ## 🔍 Projection (`fields`, `fields!`)
 
 The **projection** feature allows clients to include or exclude specific fields from the API response using query parameters. This helps optimize payload size and gives frontend consumers more control over the data they receive.
+
+<br>
 
 ---
 

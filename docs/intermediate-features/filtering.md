@@ -1,5 +1,8 @@
 ---
 title: Filtering
+level: 2
+order: 1
+category: intermediate
 ---
 
 {% include features.html %}
@@ -7,6 +10,8 @@ title: Filtering
 ## 🌪️ Filtering (`filter[field]`)
 
 The **filter** query allows you to compare field values using math operators like =, >, >=, <, <=, <>. You can also chain multiple conditions with logical operators.
+
+<br>
 
 ---
 

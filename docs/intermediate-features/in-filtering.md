@@ -1,5 +1,8 @@
 ---
 title: In Filtering
+level: 2
+order: 2
+category: intermediate
 ---
 
 {% include features.html %}
@@ -7,6 +10,8 @@ title: In Filtering
 ## 🌪 In Filtering (`in[field]`)
 
 The **in-filter** allows clients to request resources that match specific values for a field. You can also combine multiple fields using logical operators.
+
+<br>
 
 ---
 

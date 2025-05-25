@@ -1,18 +1,18 @@
 {% assign current = page.url %}
 
-{% assign features = "basic, intermediate, advanced" | split: ", " %}
-
 <div style="display: flex; gap: 2rem; align-items: flex-start;">
 
+{% assign features = "basic, intermediate, advanced" | split: ", " %}
 {% for feature in features %}
 
 {% assign doc = 'docs/' | append: feature | append: "-features" %}
-
 <details {% if page.path contains 'docs/api-reference' or page.path contains doc %}open{% endif %}>
   <summary><strong>🧪 {{ feature | capitalize }} Features</strong></summary>
 
 <ul>
-{% for page in site.pages %}
+
+{% assign pages = site.pages | where: "category", feature | sort: "order" %}
+{% for page in pages %}
   {% assign path = page.path | downcase %}
 
   {% if path contains doc %}

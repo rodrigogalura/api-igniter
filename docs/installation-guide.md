@@ -29,19 +29,13 @@ composer require rgalura/api-igniter
 Use the <ins>ApiIgniter</ins> core trait along with any specific features you want to enable:
 
 ```php
-<?php namespace App\Models;
-
-use Illuminate\Foundation\Auth\User as Authenticatable;
+...
 
 use RGalura\ApiIgniter\{
     ApiIgniter, // Core
     Projectable,
     Searchable,
-    // Sortable,
-    // Filterable,
-    // InFilterable,
-    // BetweenFilterable,
-    // Expandable,
+    # Sortable, Filterable, InFilterable, BetweenFilterable, Expandable
 };
 
 class User extends Authenticatable

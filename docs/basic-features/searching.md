@@ -1,5 +1,8 @@
 ---
 title: Searching
+level: 2
+order: 3
+category: basic
 ---
 
 {% include features.html %}
@@ -13,6 +16,8 @@ The **searching** feature allows clients to perform keyword-based searches acros
 - `*term*` → match anywhere
 - `term*` → match at the beginning
 - `*term` → match at the end
+
+<br>
 
 ---
 
