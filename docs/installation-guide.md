@@ -1,5 +1,6 @@
 ---
 title: Installation Guide
+level: 1
 order: 1
 ---
 
@@ -104,4 +105,4 @@ Open your browser or an API client like Postman and try this example request:
 
 ## 🧭 Next Steps
 
-Now that you’re up and running, explore more features in the [API Reference](https://rodrigogalura.github.io/api-igniter/docs/api-reference.html).
+Now that you’re up and running, explore more features in the [API Reference]({{ "/docs/api-reference.html" | relative_url }}).

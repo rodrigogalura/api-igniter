@@ -1,17 +1,12 @@
-{% assign pages = site.pages | sort: "order" %}
+{% assign pages = site.pages | sort: "order" | where: "level", 1 %}
 {% assign current = page.url %}
 
 <ul>
 {% for page in pages %}
-  {% assign path = page.path | downcase %}
-  {% if path contains 'docs/' %}
-    {% unless path contains 'docs/basic-features/' or path contains 'docs/intermediate-features/' or path contains 'docs/advanced-features/' %}
   <li>
     <a href="{{ page.url | relative_url }}" class="{% if page.url == current %}active{% endif %}">
       {{ page.title | default: page.name }}
     </a>
   </li>
-    {% endunless %}
-  {% endif %}
 {% endfor %}
 </ul>
