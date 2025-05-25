@@ -10,8 +10,6 @@ order: 3
 
 <sup>Laravel’s API Resource is indeed powerful and flexible. However, Api Igniter offers a collection of higher-level features designed to streamline common API tasks like field projection, filtering, relationship expansion, and more — all via intuitive query parameters.</sup>
 
-> <sup>It was born out of real-world needs in my own projects, and I built it to reduce boilerplate and make APIs more flexible for frontend consumers. I’m simply sharing the features that helped me move faster — and hope they help you too.</sup>
-
 <br>
 
 ---
