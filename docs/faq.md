@@ -16,7 +16,7 @@ order: 3
 
 ## 2. Is Api Igniter compatible with Laravel Latest?
 
-<sup>✅ Yes. Api Igniter is fully compatible with:</sup>
+<sup>Yes. Api Igniter is fully compatible with:</sup>
 
 <sup>- Laravel versions: 10, 11, and 12</sup>
 
@@ -34,7 +34,7 @@ order: 3
 
 <sup>Api Igniter also sanitizes operators and validates query syntax internally, adding an extra layer of protection.</sup>
 
-> <sup>✅ As always, follow Laravel best practices and avoid exposing raw database input to untrusted users.</sup>
+> <sup>As always, follow Laravel best practices and avoid exposing raw database input to untrusted users.</sup>
 
 <br>
 
@@ -42,7 +42,7 @@ order: 3
 
 ## 4. Does Api Igniter support Eloquent relationships?
 
-<sup>✅ Absolutely. Api Igniter was built with Eloquent in mind. It fully supports all relationship types:</sup>
+<sup>Absolutely. Api Igniter was built with Eloquent in mind. It fully supports all relationship types:</sup>
 
 <sup>- HasOne</sup>
 
@@ -70,7 +70,7 @@ order: 3
 <!-- 
 ## 6. Is Api Igniter configurable?
 
-<sup>✅ Yes, it’s designed with flexibility in mind.</sup>
+<sup>Yes, it’s designed with flexibility in mind.</sup>
 
 <sup>You can:</sup>
 

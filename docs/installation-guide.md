@@ -33,16 +33,23 @@ Use the <ins>ApiIgniter</ins> core trait along with any specific features you wa
 
 use RGalura\ApiIgniter\{
     ApiIgniter, // Core
-    Projectable,
-    Searchable,
-    # Sortable, Filterable, InFilterable, BetweenFilterable, Expandable
+    Projectable, Searchable, // Enabled Features
+
+    // Other Available Features:
+    # Sortable,
+    # Filterable,
+    # InFilterable,
+    # BetweenFilterable,
+    # Expandable,
+    
+    // Or if you want to enable all features, just use the trait 'AllFeatures' like the example beneath:
+    # ApiIgniter, AllFeatures
 };
 
 class User extends Authenticatable
 {
     use ApiIgniter;
-    use Projectable;
-    use Searchable;
+    use Projectable, Searchable;
     // ...
 
     # ⚠️ Do NOT define this:
